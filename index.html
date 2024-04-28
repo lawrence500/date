@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://kit.fontawesome.com/081c335e70.js" crossorigin="anonymous"></script>
+        <script src="index.js" defer></script>
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                
+
+                min-height: 100vh;
+                min-height: 100svh;
+
+                margin: 0;
+            }
+
+            *{box-sizing: border-box;}
+            header{
+                height: 10vh;
+                background-color: lightblue;
+
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+
+            header i{
+                font-size: 50px;
+                margin-right: 10px;
+            }
+
+            .active{
+                animation: reminders 2s;
+            }
+
+            @keyframes reminders {
+                from{transform: rotateY(145deg);}
+                to{transform: rotateY(-145deg);}
+            }
+            main{
+                height: 80vh;
+                background-color: midnightblue;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            main div{
+                display: flex;
+            }
+
+            main div input{
+                padding: 20px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            main div button{
+                width: 150px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            footer{
+                height: 10vh;
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+                <div>
+                    <i class="fa-solid fa-bell"></i>
+                    <span id="text"></span>
+                </div>
+        </header>
+
+        <main>
+            <h1>Create a reminder</h1>
+            <div>
+                <input type="text" placeholder="set reminder" id="reminder">
+                <input type="date" id="date-input">
+                <button id="submit">submit</button>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="search reminder">
+                <button id="searchBtn">search</button>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
