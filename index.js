@@ -122,6 +122,10 @@ const searchReminders = () =>{
     
     if(searchInput.value === reminder['reminder']){
       alert(`${reminder['reminder']}(${reminder['date']})`)
+
+      if(confirm('press okay to delete')){
+        alert('reminder deleted')
+      }
     } else{
       alert('reminder not found')
     }
